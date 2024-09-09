@@ -24,11 +24,11 @@ router
     .get(
         "/getUser",
         verifyJWT,
+        getCurrentUser,
         checkMinimumBalance,
         monthlyIncomeMiddleware,
         checkGoalDeadlinesMiddleware,
         monthlyExpenseDeductionMiddleware,
-        getCurrentUser,
     );
 
 export default router;
